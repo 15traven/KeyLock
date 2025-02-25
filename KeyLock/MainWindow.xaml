@@ -18,16 +18,17 @@
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
         Spacing="24">
-        <TextBlock
-            Text="Key Lock"
-            FontWeight="SemiBold"
-            FontSize="32"
-            IsTextSelectionEnabled="False"/>
+        <FontIcon 
+            x:Name="icon" 
+            Glyph="&#xE785;" 
+            FontSize="48"/>
         <ToggleButton 
             x:Name="toggle"
             Content="Lock"
             Checked="blockInput"
             Unchecked="unblockInput"
-            Width="150"/>
+            Width="164"
+            FontSize="18"/>
+
     </StackPanel>
 </Window>

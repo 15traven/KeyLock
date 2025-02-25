@@ -33,13 +33,17 @@ namespace KeyLock
         private void blockInput(object sender, RoutedEventArgs e)
         {
             keyboardBlocker.BlockKeyboard();
+
             toggle.Content = "Unlock";
+            icon.Glyph = "\uE72E";
         }
 
         private void unblockInput(object sender, RoutedEventArgs e)
         {
             keyboardBlocker.UnblockKeyboard();
+
             toggle.Content = "Lock";
+            icon.Glyph = "\uE785";
         }
     }
 }
