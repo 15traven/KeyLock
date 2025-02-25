@@ -1,23 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+using KeyLock.Services;
+using KeyLock.Contracts;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-using Microsoft.UI.Xaml.Navigation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 
 namespace KeyLock
 {
+        
     public sealed partial class MainWindow : Window
     {
+        private readonly IKeyboardBlocker keyboardBlocker = new KeyboardBlocker();
+
         public MainWindow()
         {
             this.InitializeComponent();
@@ -31,6 +23,23 @@ namespace KeyLock
             }
 
             AppWindow.Resize(new Windows.Graphics.SizeInt32(300, 300));
+
+            this.Closed += (sender, args) =>
+            {
+                keyboardBlocker.UnblockKeyboard();
+            };
+        }
+
+        private void blockInput(object sender, RoutedEventArgs e)
+        {
+            keyboardBlocker.BlockKeyboard();
+            toggle.Content = "Unlock";
+        }
+
+        private void unblockInput(object sender, RoutedEventArgs e)
+        {
+            keyboardBlocker.UnblockKeyboard();
+            toggle.Content = "Lock";
         }
     }
 }

@@ -24,7 +24,10 @@
             FontSize="32"
             IsTextSelectionEnabled="False"/>
         <ToggleButton 
-            Content="Activate"
+            x:Name="toggle"
+            Content="Lock"
+            Checked="blockInput"
+            Unchecked="unblockInput"
             Width="150"/>
     </StackPanel>
 </Window>
