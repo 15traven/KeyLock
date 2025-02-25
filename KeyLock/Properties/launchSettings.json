@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "KeyLock (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "KeyLock (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
