@@ -25,8 +25,8 @@
         <ToggleButton 
             x:Name="toggle"
             Content="Lock"
-            Checked="blockInput"
-            Unchecked="unblockInput"
+            Checked="BlockInput"
+            Unchecked="UnblockInput"
             Width="164"
             FontSize="18"/>
 

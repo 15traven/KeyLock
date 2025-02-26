@@ -30,7 +30,7 @@ namespace KeyLock
             };
         }
 
-        private void blockInput(object sender, RoutedEventArgs e)
+        private void BlockInput(object sender, RoutedEventArgs e)
         {
             keyboardBlocker.BlockKeyboard();
 
@@ -38,7 +38,7 @@ namespace KeyLock
             icon.Glyph = "\uE72E";
         }
 
-        private void unblockInput(object sender, RoutedEventArgs e)
+        private void UnblockInput(object sender, RoutedEventArgs e)
         {
             keyboardBlocker.UnblockKeyboard();
 
