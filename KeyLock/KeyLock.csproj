@@ -56,5 +56,7 @@
     <PublishTrimmed Condition="'$(Configuration)' == 'Debug'">False</PublishTrimmed>
     <PublishTrimmed Condition="'$(Configuration)' != 'Debug'">True</PublishTrimmed>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ApplicationIcon>Assets\Logo.ico</ApplicationIcon>
+    <PackageIcon></PackageIcon>
   </PropertyGroup>
 </Project>
