@@ -12,15 +12,60 @@
     <EnableMsixTooling>true</EnableMsixTooling>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
   <ItemGroup>
-    <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\LockScreenLogo.scale-200.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-unplated_targetsize-24.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Remove="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\LargeTile.scale-100.png" />
+    <None Remove="Assets\LargeTile.scale-125.png" />
+    <None Remove="Assets\LargeTile.scale-150.png" />
+    <None Remove="Assets\LargeTile.scale-200.png" />
+    <None Remove="Assets\LargeTile.scale-400.png" />
+    <None Remove="Assets\SmallTile.scale-100.png" />
+    <None Remove="Assets\SmallTile.scale-125.png" />
+    <None Remove="Assets\SmallTile.scale-150.png" />
+    <None Remove="Assets\SmallTile.scale-200.png" />
+    <None Remove="Assets\SmallTile.scale-400.png" />
+    <None Remove="Assets\SplashScreen.scale-100.png" />
+    <None Remove="Assets\SplashScreen.scale-125.png" />
+    <None Remove="Assets\SplashScreen.scale-150.png" />
+    <None Remove="Assets\SplashScreen.scale-200.png" />
+    <None Remove="Assets\SplashScreen.scale-400.png" />
+    <None Remove="Assets\Square150x150Logo.scale-100.png" />
+    <None Remove="Assets\Square150x150Logo.scale-125.png" />
+    <None Remove="Assets\Square150x150Logo.scale-150.png" />
+    <None Remove="Assets\Square150x150Logo.scale-200.png" />
+    <None Remove="Assets\Square150x150Logo.scale-400.png" />
+    <None Remove="Assets\Square44x44Logo.scale-100.png" />
+    <None Remove="Assets\Square44x44Logo.scale-125.png" />
+    <None Remove="Assets\Square44x44Logo.scale-150.png" />
+    <None Remove="Assets\Square44x44Logo.scale-200.png" />
+    <None Remove="Assets\Square44x44Logo.scale-400.png" />
+    <None Remove="Assets\Square44x44Logo.targetsize-16.png" />
+    <None Remove="Assets\Square44x44Logo.targetsize-16_altform-unplated.png" />
+    <None Remove="Assets\Square44x44Logo.targetsize-24.png" />
+    <None Remove="Assets\Square44x44Logo.targetsize-256.png" />
+    <None Remove="Assets\Square44x44Logo.targetsize-32.png" />
+    <None Remove="Assets\Square44x44Logo.targetsize-48.png" />
+    <None Remove="Assets\StoreLogo.scale-100.png" />
+    <None Remove="Assets\StoreLogo.scale-125.png" />
+    <None Remove="Assets\StoreLogo.scale-150.png" />
+    <None Remove="Assets\StoreLogo.scale-200.png" />
+    <None Remove="Assets\StoreLogo.scale-400.png" />
+    <None Remove="Assets\Wide310x150Logo.scale-100.png" />
+    <None Remove="Assets\Wide310x150Logo.scale-125.png" />
+    <None Remove="Assets\Wide310x150Logo.scale-150.png" />
+    <None Remove="Assets\Wide310x150Logo.scale-200.png" />
+    <None Remove="Assets\Wide310x150Logo.scale-400.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +83,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1742" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.6.250205002" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Assets\PackageIcon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <!--
@@ -57,6 +108,6 @@
     <PublishTrimmed Condition="'$(Configuration)' != 'Debug'">True</PublishTrimmed>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <ApplicationIcon>Assets\Logo.ico</ApplicationIcon>
-    <PackageIcon></PackageIcon>
+    <PackageIcon>PackageIcon.png</PackageIcon>
   </PropertyGroup>
 </Project>
